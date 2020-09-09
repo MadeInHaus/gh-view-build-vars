@@ -3,7 +3,17 @@ author: Ryan Couse
 description: Create Project ENVs based on convention from git branch ref.
 runs:
     using: node12
-    main: 'main.js'
+    main: 'dist/index.js'
+inputs:
+    project_name:
+        description: The name of the project.
+outputs:
+    branch_slug:
+        description: 'The name of the branch url safe eg: feature/exciting-stuff -> `feature-exciting-stuff`'
+    project_name_slug:
+        description: 'The name of the project url safe eg: My project -> `my-project`'
+    project_name_branch_slug:
+        description: 'Project and name name combined url safe eg: `my-project-feature-exciting-stuff`'
 branding:
     icon: upload
     color: orange
