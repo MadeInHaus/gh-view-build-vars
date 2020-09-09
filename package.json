@@ -1,0 +1,34 @@
+{
+    "name": "gh-view-build-vars",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "ncc build main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rynocouse/gh-view-build-vars.git"
+    },
+    "keywords": [
+        "github",
+        "actions",
+        "github actions",
+        "ecr",
+        "aws",
+        "amazon"
+    ],
+    "author": "Ryan Couse",
+    "bugs": {
+        "url": "https://github.com/rynocouse/gh-view-build-vars/issues"
+    },
+    "homepage": "https://github.com/rynocouse/gh-view-build-vars#readme",
+    "dependencies": {
+        "@actions/core": "^1.1.0",
+        "slugify": "^1.4.5"
+    },
+    "devDependencies": {
+        "@vercel/ncc": "^0.24.0",
+        "eslint": "^7.8.1"
+    }
+}
