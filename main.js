@@ -7,4 +7,6 @@ const { context } = github;
 
 const branch = (context.ref && context.ref.replace('refs/heads/', '')) || 'unknown';
 
+core.debug(`branch: ${branch}`);
+
 core.exportVariable('GITHUB_REF_SLUG_URL', slugify(branch));

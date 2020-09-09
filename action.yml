@@ -1,6 +1,6 @@
 name: Project ENV Vars
-author: rynocouse
-description: Create convention based project name & slugs.
+author: Ryan Couse
+description: Create Project ENVs based on convention from git branch ref.
 runs:
     using: node12
     main: 'main.js'
