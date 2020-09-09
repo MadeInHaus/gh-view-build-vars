@@ -2,6 +2,7 @@ const { execSync } = require('child_process');
 const core = require('@actions/core');
 const github = require('@actions/github');
 const slugify = require('slugify');
+slugify.extend({ '/': '-' });
 
 const { context } = github;
 const project_name = core.getInput('project_name', { required: true });

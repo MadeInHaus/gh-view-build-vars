@@ -9,6 +9,7 @@ const { execSync } = __webpack_require__(129);
 const core = __webpack_require__(186);
 const github = __webpack_require__(438);
 const slugify = __webpack_require__(481);
+slugify.extend({ '/': '-' });
 
 const { context } = github;
 const project_name = core.getInput('project_name', { required: true });
