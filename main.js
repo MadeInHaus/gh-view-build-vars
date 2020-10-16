@@ -7,7 +7,13 @@ slugify.extend({ '/': '-' });
 const { context } = github;
 const project_name = core.getInput('project_name', { required: true });
 
-const branch = (context.ref && context.ref.replace('refs/heads/', '')) || 'unknown';
+console.log(context);
+
+const branch =
+    context.github.event.ref ||
+    (context.ref && context.ref.replace('refs/heads/', '')) ||
+    'unknown';
+
 const branch_slug = slugify(branch);
 core.debug(`branch: ${branch}`);
 core.debug(`branch_slug: ${branch_slug}`);
