@@ -16,10 +16,7 @@ const project_name = core.getInput('project_name', { required: true });
 
 console.log(context);
 
-const branch =
-    context.github.event.ref ||
-    (context.ref && context.ref.replace('refs/heads/', '')) ||
-    'unknown';
+const branch = (context.ref && context.ref.replace('refs/heads/', '')) || 'unknown';
 
 const branch_slug = slugify(branch);
 core.debug(`branch: ${branch}`);
